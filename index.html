@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coral Checkout</title>
+    <meta
+      name="description"
+      content="Responsive checkout landing page with pricing, FAQ, and contact form."
+    >
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23168b8f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='700' fill='white'%3EC%3C/text%3E%3C/svg%3E"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Coral Checkout home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Coral Checkout
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/checkout-hero.png"
+          alt="Checkout interface displayed on a laptop and phone"
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Fast payments for growing teams</p>
+          <h1 id="hero-title">Coral Checkout</h1>
+          <p>
+            Launch a polished checkout flow with responsive pricing, clear plan
+            details, and a direct path for buyers to get help before they pay.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pricing">View plans</a>
+            <a class="button button-secondary" href="#contact">Talk to sales</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-heading">
+          <p class="eyebrow">Plans</p>
+          <h2 id="pricing-title">Pricing that scales with checkout volume</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div>
+              <h3>Starter</h3>
+              <p>For new stores validating a checkout flow.</p>
+            </div>
+            <p class="price">$19<span>/mo</span></p>
+            <ul class="feature-list">
+              <li>Hosted checkout page</li>
+              <li>Basic payment links</li>
+              <li>Email support</li>
+            </ul>
+            <a class="button button-outline" href="#contact">Choose Starter</a>
+          </article>
+
+          <article class="pricing-card featured" aria-label="Pro plan, most popular">
+            <div>
+              <p class="badge">Most popular</p>
+              <h3>Pro</h3>
+              <p>For teams that want smoother conversion and support.</p>
+            </div>
+            <p class="price">$49<span>/mo</span></p>
+            <ul class="feature-list">
+              <li>Custom checkout branding</li>
+              <li>Abandoned cart recovery</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="button button-primary" href="#contact">Choose Pro</a>
+          </article>
+
+          <article class="pricing-card">
+            <div>
+              <h3>Scale</h3>
+              <p>For high-volume teams with advanced needs.</p>
+            </div>
+            <p class="price">$129<span>/mo</span></p>
+            <ul class="feature-list">
+              <li>Multi-market checkout</li>
+              <li>Advanced reporting</li>
+              <li>Dedicated onboarding</li>
+            </ul>
+            <a class="button button-outline" href="#contact">Choose Scale</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-title">FAQ</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Can I use Coral Checkout on mobile?</summary>
+            <p>
+              Yes. The checkout layout, pricing cards, FAQ, and contact form
+              are built to reflow cleanly on narrow screens.
+            </p>
+          </details>
+          <details>
+            <summary>Do I need a developer to launch?</summary>
+            <p>
+              Starter and Pro include hosted checkout pages. Scale teams can
+              add custom onboarding if they need a deeper integration.
+            </p>
+          </details>
+          <details>
+            <summary>Can I change plans later?</summary>
+            <p>
+              You can upgrade or downgrade any time. Plan changes take effect
+              at the next billing cycle.
+            </p>
+          </details>
+          <details>
+            <summary>Is payment information protected?</summary>
+            <p>
+              Coral Checkout is designed around secure, tokenized payment
+              collection and clear buyer confirmation steps.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Ready to improve checkout?</h2>
+          <p>
+            Send a note and the team will help match your store to the right plan.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <label>
+            Name
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            Plan interest
+            <select name="plan" required>
+              <option value="">Select a plan</option>
+              <option>Starter</option>
+              <option>Pro</option>
+              <option>Scale</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Coral Checkout</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
